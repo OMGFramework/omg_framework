@@ -9,15 +9,14 @@ end)
 
 -- Spawn with a fake skin, just for now xD [WIP]
 AddEventHandler("playerSpawned", function(spawn)
-	local ped = PlayerId()
-	local model = GetHashKey("player_one")
-	RequestModel(model)
-	while not HasModelLoaded(model) do
-        RequestModel(model)
-        Wait(0)
-    end
-	SetPlayerModel(ped, model)
-	SetModelAsNoLongerNeeded(model)
+	local defaultModel = GetHashKey('mp_m_freemode_01')
+	RequestModel(defaultModel)
+	while not HasModelLoaded(defaultModel) do
+		Citizen.Wait(10)
+	end
+	SetPlayerModel(PlayerId(), defaultModel)
+	SetPedDefaultComponentVariation(PlayerPedId())
+	SetModelAsNoLongerNeeded(defaultModel)
 end)
 
 RegisterNetEvent('OMG:initializeinfo')
