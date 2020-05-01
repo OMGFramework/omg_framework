@@ -1,4 +1,4 @@
-# OnlineMultiplayerGamemode Framework
+# Online.Multiplayer.Gamemode Framework
 
 # :clipboard: **What is OMG Base?**
 
