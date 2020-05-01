@@ -15,6 +15,7 @@ I hope everyone like the idea and if you want support this project just:
 # :lock: **Requirements:**
 
 mysql_async [https://github.com/brouznouf/fivem-mysql-async]
+
 NativeUI [https://github.com/FrazzIe/NativeUILua] (not in use right now but will be in future, why?, because i want make framework with less dependencies possible)
 
 # :gear: **How to Install**
