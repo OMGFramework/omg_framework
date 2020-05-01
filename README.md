@@ -37,8 +37,7 @@ set mysql_connection_string "server=127.0.0.1;database=omg;userid=root;password=
 - Just start your server and have fun
 
 # :camera: **Screenshots**
-
-Coming soon
+![image.png)](https://i.imgur.com/P6bQqCY.png)
 
 # :bookmark: **Attention:**
 **This framework is in WIP so i dont recommend use unless you are a developer or have some knowlage abou what are you doing**
