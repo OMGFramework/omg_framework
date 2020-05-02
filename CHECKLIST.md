@@ -1,6 +1,6 @@
 # Online.Multiplayer.Gamemode Framework
 
-# :memo:  ***Changelogs***
+# :memo:  ***Checklist***
 
 - [x] Money System
 - [x] Job System (WIP)
