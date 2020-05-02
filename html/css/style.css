@@ -31,6 +31,15 @@
 	color: #b90000;
 }
 
+#job{
+	font-family: 'Bebas Neue', cursive;
+	position:absolute;
+	right:1em;
+	top:4em;
+	font-size:2em;
+	color: #ffffff;
+}
+
 #rmvMoney{
 	display:none;
 	font-family: 'Bebas Neue', cursive;

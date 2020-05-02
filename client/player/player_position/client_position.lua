@@ -30,8 +30,6 @@ AddEventHandler("OMG:spawn_last_position", function(data, PosX, PosY, PosZ)
             Wait(2500)
             FreezeEntityPosition(GetPlayerPed(-1), false)
             Citizen.Wait(10)
-            TriggerEvent('OMG:advenced_notication', 'CHAR_PEGASUS_DELIVERY', 'Bienvenue !', false, "")
-            Citizen.Wait(10)
             Notify(_L("welcome"))
             PlaySound(-1, "CHARACTER_SELECT", "HUD_FRONTEND_DEFAULT_SOUNDSET", 0);
             loaded = true

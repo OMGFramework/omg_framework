@@ -20,13 +20,14 @@ AddEventHandler("playerSpawned", function(spawn)
 end)
 
 RegisterNetEvent('OMG:initializeinfo')
-AddEventHandler('OMG:initializeinfo', function(money,dirtymoney,bankbalance)
+AddEventHandler('OMG:initializeinfo', function(money,dirtymoney,bankbalance,job)
 
 	SendNUIMessage({
 		initialise = true,
 		money = money,
 		dirtymoney = dirtymoney,
-		bankbalanceinfo = bankbalance
+		bankbalanceinfo = bankbalance,
+		job = job
 	})
 
 end)
@@ -54,6 +55,15 @@ AddEventHandler('OMG:money', function(rslt)
 
 	SendNUIMessage({
 		moneyinfo = rslt
+	})
+
+end)
+
+RegisterNetEvent('OMG:job')
+AddEventHandler('OMG:job', function(rslt)
+
+	SendNUIMessage({
+		jobinfo = rslt
 	})
 
 end)

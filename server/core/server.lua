@@ -2,7 +2,8 @@ AddEventHandler('onMySQLReady', function()
     config = {
         player_money = omg_framework._default_player_money,
         player_bank_balance = omg_framework._default_player_bank_balance,
-        player_dirty_money = omg_framework._default_player_dirty_money
+        player_dirty_money = omg_framework._default_player_dirty_money,
+		player_job = omg_framework._default_player_job
     }
 end)
 
@@ -26,7 +27,7 @@ AddEventHandler('OMG:spawn', function()
     local source = source
     local player = _server_get_player_data_info(source)
     if player[1] ~= nil then
-        TriggerClientEvent('OMG:initializeinfo', source, player[1].player_money, player[1].player_dirty_money, player[1].player_bank_balance)
+        TriggerClientEvent('OMG:initializeinfo', source, player[1].player_money, player[1].player_dirty_money, player[1].player_bank_balance, player[1].player_job)
     end
 end)
 

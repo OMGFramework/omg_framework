@@ -12,5 +12,5 @@ omg_framework = {
     _default_player_money = 2000, -- Default player money
     _default_player_bank_balance = 3000, -- Default player bank balance
     _default_player_dirty_money = 0, -- Default player dirty money
-
+	_default_player_job = 'police',
 }
