@@ -37,7 +37,8 @@ server_scripts {
     'server/player/player_position/server_position.lua',
 	-- Locale
     'language/language.lua',
-    'language/english.lua'
+    'language/english.lua',
+    'language/french.lua'
 }
 
 client_scripts {
@@ -50,7 +51,8 @@ client_scripts {
     'client/player/player_position/client_position.lua',
 	-- Locale
     'language/language.lua',
-    'language/english.lua'
+    'language/english.lua',
+    'language/french.lua'
 }
 
 server_exports {
