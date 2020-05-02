@@ -7,7 +7,7 @@ I hope everyone like the idea and if you want support this project just:
 ***Read the "attention section"***
 
 # :memo:  ***Changelogs***
-#### [CHECKLIST](https://github.com/OMG-Framework)
+#### [CHECKLIST](https://github.com/OMG-Framework/omg_framework/blob/master/CHECKLIST.md)
 ```
 ✔️ Version 1.0.0 Public Release
 ```
