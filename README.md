@@ -40,7 +40,7 @@ set mysql_connection_string "server=127.0.0.1;database=omg;userid=root;password=
 ![image.png)](https://i.imgur.com/P6bQqCY.png)
 
 # :bookmark: **Attention:**
-**This framework is in WIP so i dont recommend use unless you are a developer or have some knowlage abou what are you doing**
+**This framework is in WIP so i dont recommend use unless you are a developer or have some knowlage about what are you doing**
 
 ### OMG Framework is a project that i made to the FiveM community, but a framework take too much time and coding knowlage, and im just one guy -_-, so if you are a developer and are you reading this i invite you to join our development team, every help is needed so if you want help join the discord and send me a DM or just talk in chat
 
