@@ -16,7 +16,7 @@ I hope everyone like the idea and if you want support this project just:
 
 mysql_async [https://github.com/brouznouf/fivem-mysql-async]
 
-NativeUI [https://github.com/FrazzIe/NativeUILua] (not in use right now but will be in future, why?, because i want make framework with less dependencies possible)
+RageUI [https://github.com/iTexZoz/RageUI] (not in use right now but will be in future, why?, because i want make framework with less dependencies possible)
 
 # :gear: **How to Install**
 
@@ -25,7 +25,7 @@ NativeUI [https://github.com/FrazzIe/NativeUILua] (not in use right now but will
 - Add to your server.cfg, look like:
 ```
 ensure mysql_async
-ensure NativeUI
+ensure RageUI
 ensure omg_framework
 ```
 - Add to your server cfg the following line:
