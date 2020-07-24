@@ -21,7 +21,7 @@ RageUI [https://github.com/iTexZoz/RageUI] (not in use right now but will be in 
 # :gear: **How to Install**
 
 - Download the **Requirements** and drop in your "resources" folder
-- Download OMG Framework (https://github.com/OMG-Framework) and drop in your "resrouces" folder
+- Download OMG Framework (https://github.com/OMG-Framework) and drop in your "resources" folder
 - Add to your server.cfg, look like:
 ```
 ensure mysql_async
