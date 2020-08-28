@@ -48,4 +48,4 @@ set mysql_connection_string "server=127.0.0.1;database=omg;userid=root;password=
 
 ## [Here](https://github.com/OMG-Framework) or Github (https://github.com/OMG-Framework)
 ### [Join our Discord](https://discord.gg/84ND2UQ) or in (https://discord.io/omgframework)
-# OMGFramework Creators: Dev-OMG aka Mackgame4 & Outcastdev
+# OMGFramework Creators: Dev-OMG aka Mackgame4
