@@ -1,16 +1,14 @@
-omg_framework = {
+Config = {}
 
-    _language = 'english', -- Languege
-	_IPLs = true, -- Load IPLs (fix holes in the map)
+Config.locale = 'english' -- Language
+Config.IPLs = true -- Load IPLs (fix holes in the map)
+Config.debug = true -- Display Server Logs
 
-    _display_logs = true, -- Display logs serveur (true / false)
-	
-    _sufix = 'OMG Framework', -- Sufix / Server Name
+Config.server_name = 'OMG Framework' -- Server Name
 
-    _player_first_spawn_location = '{-1015.0816650391, -2752.2185058594,  0.80036240816116, 134.05169677734}', -- First spawn location {x, y, z, h}
+Config.first_spawn_location = '{-1015.0816650391, -2752.2185058594,  0.80036240816116, 134.05169677734}' -- First Spawn Location {x, y, z, h}
 
-    _default_player_money = 2000, -- Default player money
-    _default_player_bank_balance = 3000, -- Default player bank balance
-    _default_player_dirty_money = 0, -- Default player dirty money
-	_default_player_job = 'police',
-}
+Config.default_player_money = 2000 -- Default Player Money
+Config.default_player_bank_balance = 3000 -- Default Player Bank Balance
+Config.default_player_dirty_money = 0 -- Default Player Dirty Money
+Config.default_player_job = 'police' -- Default Player Job
