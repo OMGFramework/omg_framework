@@ -2,37 +2,30 @@
 ![image.png](https://i.imgur.com/cezc10o.png)
 # :clipboard: **What is OMG Base?**
 
-OMG Framework / OMG Base is a roleplay framework for FiveM, the objective that why i make that framework is because FiveM need a framework with much less dependencies, frequently updated and that uses their natives, because exists much framework arround FiveM but all need one of that one of that etc
+OMG Framework / OMG Base is a multigamemode framework for FiveM, the objective that why i make that framework is because FiveM need a framework with much less dependencies, frequently updated and that uses their natives, because exists much framework arround FiveM but all need one of that one of that etc
 I hope everyone like the idea and if you want support this project just:
 ***Read the "attention section"***
 
 # :memo:  ***Changelogs***
-#### [CHECKLIST](https://github.com/OMG-Framework/omg_framework/blob/master/CHECKLIST.md)
 ```
-✔️ Version 1.0.0 Public Release
+✔️ Something is going on...
 ```
 
 # :lock: **Requirements:**
 
-mysql_async [https://github.com/brouznouf/fivem-mysql-async]
-
-RageUI [https://github.com/iTexZoz/RageUI] (not in use right now but will be in future, why?, because i want make framework with less dependencies possible)
+fivem-mongodb [https://github.com/alcoholiclobster/fivem-mongodb]  
+NativeUI [https://github.com/FrazzIe/NativeUILua]
 
 # :gear: **How to Install**
 
 - Download the **Requirements** and drop in your "resources" folder
-- Download OMG Framework (https://github.com/OMG-Framework) and drop in your "resources" folder
+- Download OMG Framework and drop in your "resources" folder
 - Add to your server.cfg, look like:
 ```
-ensure mysql_async
-ensure RageUI
+ensure fivem-mongodb
+ensure NativeUI
 ensure omg_framework
 ```
-- Add to your server cfg the following line:
-```
-set mysql_connection_string "server=127.0.0.1;database=omg;userid=root;password=;"
-```
-- Export the SQL file
 - Install some addons (Optional)
 - Just start your server and have fun
 

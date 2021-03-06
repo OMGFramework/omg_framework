@@ -1,4 +1,4 @@
-Citizen.CreateThread(function()
+--[[Citizen.CreateThread(function()
     function _omg_framework_checker(err, response, headers)
         local data = json.decode(response)
         local get_data_file = LoadResourceFile(GetCurrentResourceName(), "version.json")
@@ -30,4 +30,4 @@ Citizen.CreateThread(function()
         PerformHttpRequest("https://pastebin.com/raw/PWgev2cp", _omg_framework_checker, "GET")
     end
     _request_check_fivem_core_http()
-end)
+end)]]--
