@@ -6,10 +6,26 @@ author 'OMG Dev Team'
 description 'A FiveM Framework for Multiple Gamemodes'
 version '1.0.0'
 
+files {
+	'html/index.html',
+    'html/js/script.js',
+    'html/font/pricedown.ttf',
+    'html/css/style.css',
+	'html/icons/money.png',
+	'html/icons/bank.png',
+	'html/icons/dirtymoney.png',
+	'html/icons/job.png'
+}
+
 server_scripts {
 	'config.lua',
 	'version.lua',
+	'version',
+	-- Core
     'server/server.lua',
+	-- Locales
+    'language/locales.lua',
+    'language/en.lua'
 }
 
 client_scripts {
@@ -17,8 +33,13 @@ client_scripts {
     'client/client.lua',
 	'client/functions.lua',
 	'client/testingcommands.lua',
+	-- Locales
+    'language/locales.lua',
+    'language/en.lua'
 }
 
 dependencies {
 	'fivem-mongodb'
 }
+
+ui_page('html/index.html')

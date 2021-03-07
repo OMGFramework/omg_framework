@@ -1,5 +1,5 @@
---[[Citizen.CreateThread(function()
-    function _omg_framework_checker(err, response, headers)
+Citizen.CreateThread(function()
+    function omg_framework_checker(err, response, headers)
         local data = json.decode(response)
         local get_data_file = LoadResourceFile(GetCurrentResourceName(), "version.json")
         local version_json = json.decode(get_data_file).version
@@ -24,10 +24,10 @@
             print('' .. _L("settings2") .. '' .. tostring(omg_framework._display_logs) .. '')
             print("^2--------------------------------------------------------------------------")
         end
-        SetTimeout(600000, _request_check_fivem_core_http)
+        SetTimeout(600000, request_check_fivem_core_http)
     end
-    function _request_check_fivem_core_http()
-        PerformHttpRequest("https://pastebin.com/raw/PWgev2cp", _omg_framework_checker, "GET")
+    function request_check_fivem_core_http()
+        PerformHttpRequest("https://pastebin.com/raw/PWgev2cp", omg_framework_checker, "GET")
     end
-    _request_check_fivem_core_http()
-end)]]--
+    request_check_fivem_core_http()
+end)

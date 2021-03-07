@@ -1,6 +1,6 @@
 Config = {}
 
-Config.locale = 'english' -- Language
+Config.locale = 'en' -- Language/Locale
 Config.IPLs = true -- Load IPLs (fix holes in the map)
 Config.debug = true -- Display Server Logs
 
