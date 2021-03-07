@@ -53,10 +53,22 @@ function loadUser(id)
     end)
 end
 
-function saveAllUser(players)
+function saveUser(id, data)
+    local player = getIdentifier(id)
+    exports.mongodb:updateOne({ collection="users", query = { identifier = player }, update = { ["$set"] = { position = data.position } } }, function (success, updatedCount)
+        if not success then
+            printf("[MongoDB] Error in findOne: "..tostring(result))
+            return
+        end
+        printf("Saved "..id)
+    end)
+    print(data.position)
+end
+
+--[[function saveAllUsers(players)
     for i=1, players, 1 do
         local player = getIdentifier(players)
-        exports.mongodb:updateOne({ collection="users", query = { identifier = player }, update = { ["$set"] = { money = 1000000 } } }, function (success, updatedCount)
+        exports.mongodb:updateOne({ collection="users", query = { identifier = player }, update = { ["$set"] = { money = money } } }, function (success, updatedCount)
             if not success then
                 printf("[MongoDB] Error in findOne: "..tostring(result))
                 return
@@ -65,4 +77,4 @@ function saveAllUser(players)
         end)
         players = players-1
     end
-end
+end]]--

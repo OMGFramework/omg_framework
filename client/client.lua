@@ -28,5 +28,9 @@ end)
 
 RegisterCommand("coords", function(source , args, rawCommand)
 	local coords = GetEntityCoords(PlayerPedId())
+	local data = {
+		position = "{"..coords.x..", "..coords.y..", "..coords.z.."}"
+	}
 	TriggerEvent('chat:addMessage', {color = { 255, 0, 0}, multiline = false, args = {Config.server_name, "~r~X:~s~"..coords.x..", ~r~Y:~s~"..coords.y..", ~r~Z:~s~"..coords.z}})
+	TriggerServerEvent('OMG:saveCoords', data)
 end, false)
