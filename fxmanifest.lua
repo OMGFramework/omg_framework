@@ -18,9 +18,11 @@ files {
 }
 
 server_scripts {
+    '@mysql-async/lib/MySQL.lua',
 	'config.lua',
 	'version.lua',
 	'version',
+    'server/server_export.lua',
     'server/server.lua',
 	-- Locales
     'locales/locales.lua',
@@ -37,8 +39,10 @@ client_scripts {
     'locales/en.lua'
 }
 
-dependencies {
-	'fivem-mongodb'
+server_exports {
+    'getIdentifiant',
+    'getIdentifier',
+    'createUser'
 }
 
 ui_page('html/index.html')

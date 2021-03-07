@@ -1,23 +1,23 @@
 local firstSpawn = true
 
 AddEventHandler("playerSpawned", function(spawn)
-	if firstSpawn == true then
-		print('OMG:spawn')
+	TriggerServerEvent('OMG:spawn') -- WIP
+	if firstSpawn then
+		TriggerServerEvent('OMG:spawn')
 		firstSpawn = false
 	end
 end)
 
+-- Spawn with a fake skin, just for now xD [WIP]
 AddEventHandler("playerSpawned", function(spawn)
-	if firstSpawn == true then
-		local defaultModel = GetHashKey('mp_m_freemode_01')
-		RequestModel(defaultModel)
-		while not HasModelLoaded(defaultModel) do
-			Citizen.Wait(100)
-		end
-		SetPlayerModel(PlayerId(), defaultModel)
-		SetPedDefaultComponentVariation(PlayerPedId())
-		SetModelAsNoLongerNeeded(defaultModel)
+	local defaultModel = GetHashKey('mp_m_freemode_01')
+	RequestModel(defaultModel)
+	while not HasModelLoaded(defaultModel) do
+		Citizen.Wait(10)
 	end
+	SetPlayerModel(PlayerId(), defaultModel)
+	SetPedDefaultComponentVariation(PlayerPedId())
+	SetModelAsNoLongerNeeded(defaultModel)
 end)
 
 Citizen.CreateThread(function()

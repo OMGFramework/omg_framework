@@ -1,9 +1,22 @@
-AddEventHandler('onResourceStart', function(resourceName)
-    if (GetCurrentResourceName() ~= resourceName) then
-        return
+RegisterServerEvent('OMG:spawn')
+AddEventHandler('OMG:spawn', function()
+    local source = source
+    createUser(source)
+end)
+
+AddEventHandler('playerConnecting', function(playerName, setKickReason)
+    local source = source
+    local player = _server_get_player_data_info(source)
+    if player[1] == nil then
+        creation_utilisateur(source)
+
+        if Config.Debug == true then
+            print('' .. _L("new_user") .. '| '..playerName..'')
+        end
+
     end
 end)
 
-AddEventHandler("onDatabaseConnect", function (databaseName)
-    print("[MongoDB][omg_framework] onDatabaseConnect: "..tostring(databaseName))
+RegisterCommand("test", function(source , args, rawCommand)
+	createUser(source)
 end)
