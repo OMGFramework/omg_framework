@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>OMG_Loadingscreen</title>
+  <link rel='stylesheet' href='https://fonts.googleapis.com/css2?family=Sen&amp;display=swap'><link rel="stylesheet" href="./style.css">
+  <link rel="stylesheet" type="text/css" media="screen" href="https://cdn.jsdelivr.net/gh/filipdutescu/popup-js@master/popup-js.css" />
+  <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/gh/filipdutescu/popup-js/popup-js.js"></script>
+</head>
+<body>
+<div class="load-bar">
+  <div class="bar"></div>
+  <div class="bar"></div>
+  <div class="bar"></div>
+</div>
+<div id="logo">
+    <!--img src="https://i.imgur.com/image.png" width="100" height="100"-->
+	<!--img src="logo.png"-->
+</div>
+<div id="main">
+    <h1>OMG Framework</h1>
+	<h2>discord.io/omgframework</h2>
+    <div class="content">
+        <p>You can press <kbd>▲</kbd> <kbd>▼</kbd> on your keyboard or swipe up/down to navigate. Mouse wheel works too.</p>
+        <p>You can press <kbd1>SPACE</kbd1> on your keyboard to play/pause music and <kbd>P</kbd> to show rules.</p>
+    </div>
+    <!--div class="buttons">
+        <button class="next" onclick="go(-1)"></button>
+        <button class="prev" onclick="go(1)"></button>
+    </div-->
+</div>
+	<script src='https://cdnjs.cloudflare.com/ajax/libs/gsap/3.2.6/gsap.min.js'></script><script  src="./script.js"></script>
+    <audio id="music" src="music.mp3" autoplay="true" hidden="true" loop="true"/>
+	<script>
+    var play = true;
+    var myAudio = document.getElementById("music");
+    myAudio.volume = 0.3;
+    function onKeyDown(event) {
+            switch (event.keyCode) {
+                case 32: //SpaceBar                    
+                    if (play) {
+                        myAudio.pause();
+                        play = false;
+                    } else {
+                        myAudio.play();
+                        play = true;
+                    }
+                    break;
+            }
+      return false;
+    }
+    window.addEventListener("keydown", onKeyDown, false);
+	function onPopup(event) {
+            switch (event.keyCode) {
+                case 80: //P                    
+				popup.openPopup()
+            }
+      return false;
+    }
+    window.addEventListener("keydown", onPopup, false);
+    </script>
+</body>
+</html>
