@@ -2,6 +2,8 @@
 ![image.png](https://i.imgur.com/cezc10o.png)
 # :clipboard: **What is OMG Base?**
 
+#### Hey OMG Framework is getting a hole new rework, come join us in (https://github.com/OMGFramework/omg_framework/tree/dev)
+
 OMG Framework / OMG Base is a roleplay framework for FiveM, the objective that why i make that framework is because FiveM need a framework with much less dependencies, frequently updated and that uses their natives, because exists much framework arround FiveM but all need one of that one of that etc
 I hope everyone like the idea and if you want support this project just:
 ***Read the "attention section"***
@@ -16,12 +18,12 @@ I hope everyone like the idea and if you want support this project just:
 
 mysql_async [https://github.com/brouznouf/fivem-mysql-async]
 
-RageUI [https://github.com/iTexZoz/RageUI] (not in use right now but will be in future, why?, because i want make framework with less dependencies possible)
+RageUI [https://github.com/iTexZoz/RageUI]
 
 # :gear: **How to Install**
 
 - Download the **Requirements** and drop in your "resources" folder
-- Download OMG Framework (https://github.com/OMG-Framework) and drop in your "resources" folder
+- Download OMG Framework (https://github.com/OMGFramework) and drop in your "resources" folder
 - Add to your server.cfg, look like:
 ```
 ensure mysql_async
@@ -46,6 +48,6 @@ set mysql_connection_string "server=127.0.0.1;database=omg;userid=root;password=
 
 # :cloud: **Download:**
 
-## [Here](https://github.com/OMG-Framework) or Github (https://github.com/OMG-Framework)
+## [Here](https://github.com/OMGFramework) or Github (https://github.com/OMGFramework)
 ### [Join our Discord](https://discord.gg/84ND2UQ) or in (https://discord.io/omgframework)
 # OMGFramework Creators: Dev-OMG aka Mackgame4
