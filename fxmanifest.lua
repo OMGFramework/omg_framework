@@ -17,26 +17,27 @@ files {
 	'html/icons/job.png'
 }
 
-server_scripts {
-    '@mysql-async/lib/MySQL.lua',
+shared_scripts {
+    'shared.lua',
 	'config.lua',
-	'version.lua',
-	'version',
-    'server/server_export.lua',
-    'server/server.lua',
-	-- Locales
     'locales/locales.lua',
     'locales/en.lua'
 }
 
+server_scripts {
+    -- Version
+	'version.lua',
+	'version',
+    -- Server
+    'server/server_export.lua',
+    'server/server.lua',
+}
+
 client_scripts {
-	'config.lua',
+    -- Client
     'client/client.lua',
 	'client/functions.lua',
 	'client/testingcommands.lua',
-	-- Locales
-    'locales/locales.lua',
-    'locales/en.lua'
 }
 
 server_exports {

@@ -27,7 +27,6 @@ Citizen.CreateThread(function()
             print('' .. _L("settings2") .. '' .. tostring(Config.debug) .. '')
             print("^2--------------------------------------------------------------------------")
         end
-        SetTimeout(600000, request_check_fivem_core_http)
     end
     PerformHttpRequest("https://omgframework.github.io/api/version.json", omg_framework_checker, "GET")
 end)

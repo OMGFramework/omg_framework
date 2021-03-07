@@ -1,22 +1,29 @@
+local serverStarting = true
+
 RegisterServerEvent('OMG:spawn')
 AddEventHandler('OMG:spawn', function()
     local source = source
-    createUser(source)
+    -- TODO: Load all player data from DB
+    printf("Placing player on server")
 end)
 
-AddEventHandler('playerConnecting', function(playerName, setKickReason)
+AddEventHandler('playerConnecting', function(playerName, setKickReason, deferrals)
     local source = source
-    local player = _server_get_player_data_info(source)
-    if player[1] == nil then
-        creation_utilisateur(source)
-
-        if Config.Debug == true then
-            print('' .. _L("new_user") .. '| '..playerName..'')
-        end
-
+    if serverStarting then
+        deferrals.defer()
+        Wait(1)
+        deferrals.update(string.format(Config.server_name.." is starting, please wait :)"))
+    else
+        loadUser(source)
+        printf('New user | '..playerName)
     end
 end)
 
 RegisterCommand("test", function(source , args, rawCommand)
-	createUser(source)
+	loadUser(source)
+end)
+
+AddEventHandler("onDatabaseConnect", function (databaseName)
+    printf("^2[MongoDB] onDatabaseConnect | "..tostring(databaseName))
+    serverStarting = false
 end)

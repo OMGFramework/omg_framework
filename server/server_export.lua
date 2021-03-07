@@ -29,27 +29,25 @@ function getIdentifiers(id)
     return identifier, license, liveid, xblid, discord, playerip
 end
 
-function createUser(id)
+function loadUser(id)
     local player = getIdentifier(id)
-    print(id, player, getIdentifiers(id))
-    -- Find if user already exists
+    printf(id, player, getIdentifiers(id))
     exports.mongodb:findOne({ collection="users", query = { identifier = player } }, function (success, result)
         if not success then
-            print("[MongoDB] Error in findOne: "..tostring(result))
+            printf("[MongoDB] Error in findOne: "..tostring(result))
             return
         end
-        -- Print user if already exists
         if #result > 0 then
-            print("[MongoDB] "..player.." is already created, loading data...")
+            printf("[MongoDB] "..player.." is already created, loading data...")
             print(result, result[1].identifier, result[1].money)
         else
-            print("[MongoDB] "..player.." does not exist. Creating...")
+            printf("[MongoDB] "..player.." does not exist. Creating...")
             exports.mongodb:insertOne({ collection="users", document = { identifier = player, money = Config.default_player_money } }, function (success, result, insertedData)
                 if not success then
-                    print("[MongoDB] Error in insertOne: "..tostring(result))
+                    printf("[MongoDB] Error in insertOne: "..tostring(result))
                     return
                 end
-                print("[MongoDB] User created: "..tostring(insertedData[1]))
+                printf("[MongoDB] User created: "..tostring(insertedData[1]))
             end)
         end
     end)
