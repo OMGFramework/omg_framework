@@ -39,10 +39,10 @@ function loadUser(id)
         end
         if #result > 0 then
             printf("[MongoDB] "..player.." is already created, loading data...")
-            print(result, result[1].identifier, result[1].money)
+            printf(result, result[1].identifier, result[1].money)
         else
             printf("[MongoDB] "..player.." does not exist. Creating...")
-            exports.mongodb:insertOne({ collection="users", document = { identifier = player, money = Config.default_player_money } }, function (success, result, insertedData)
+            exports.mongodb:insertOne({ collection="users", document = { identifier = player, money = Config.default_player_money, position = Config.first_spawn_location } }, function (success, result, insertedData)
                 if not success then
                     printf("[MongoDB] Error in insertOne: "..tostring(result))
                     return
@@ -51,4 +51,18 @@ function loadUser(id)
             end)
         end
     end)
+end
+
+function saveAllUser(players)
+    for i=1, players, 1 do
+        local player = getIdentifier(players)
+        exports.mongodb:updateOne({ collection="users", query = { identifier = player }, update = { ["$set"] = { money = 1000000 } } }, function (success, updatedCount)
+            if not success then
+                printf("[MongoDB] Error in findOne: "..tostring(result))
+                return
+            end
+            printf("Saved "..updatedCount.." users")
+        end)
+        players = players-1
+    end
 end

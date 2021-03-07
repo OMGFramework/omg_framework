@@ -1,7 +1,6 @@
 local firstSpawn = true
 
 AddEventHandler("playerSpawned", function(spawn)
-	TriggerServerEvent('OMG:spawn') -- WIP
 	if firstSpawn then
 		TriggerServerEvent('OMG:spawn')
 		firstSpawn = false
@@ -26,3 +25,8 @@ Citizen.CreateThread(function()
 	RequestIpl("rc12b_default") -- Pillbox Hospital (hole in map)
 	end
 end)
+
+RegisterCommand("coords", function(source , args, rawCommand)
+	local coords = GetEntityCoords(PlayerPedId())
+	TriggerEvent('chat:addMessage', {color = { 255, 0, 0}, multiline = false, args = {Config.server_name, "~r~X:~s~"..coords.x..", ~r~Y:~s~"..coords.y..", ~r~Z:~s~"..coords.z}})
+end, false)
