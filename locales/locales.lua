@@ -1,14 +1,14 @@
 Locales = {}
 
 function _(str, ...)
-    if Locales[Config.Locale] ~= nil then
-        if Locales[Config.Locale][str] ~= nil then
-            return string.format(Locales[Config.Locale][str], ...)
+    if Locales[Config.locale] ~= nil then
+        if Locales[Config.locale][str] ~= nil then
+            return string.format(Locales[Config.locale][str], ...)
         else
-            return 'Translation [' .. Config.Locale .. '][' .. str .. '] does not exist'
+            return 'Translation [' .. Config.locale .. '][' .. str .. '] does not exist'
         end
     else
-        return 'Locale [' .. Config.Locale .. '] does not exist'
+        return 'Locale [' .. Config.locale .. '] does not exist'
     end
 end
 

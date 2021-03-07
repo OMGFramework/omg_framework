@@ -21,11 +21,10 @@ server_scripts {
 	'config.lua',
 	'version.lua',
 	'version',
-	-- Core
     'server/server.lua',
 	-- Locales
-    'language/locales.lua',
-    'language/en.lua'
+    'locales/locales.lua',
+    'locales/en.lua'
 }
 
 client_scripts {
@@ -34,8 +33,8 @@ client_scripts {
 	'client/functions.lua',
 	'client/testingcommands.lua',
 	-- Locales
-    'language/locales.lua',
-    'language/en.lua'
+    'locales/locales.lua',
+    'locales/en.lua'
 }
 
 dependencies {

@@ -1,4 +1,4 @@
-Locales['english'] = {
+Locales['en'] = {
 	-- Welcome
 	["last_pos"] = "You have been relocated to your old position",
 	["welcome"] = "Welcome, we are preparing your character",
