@@ -28,18 +28,22 @@ AddEventHandler("onDatabaseConnect", function (databaseName)
     serverStarting = false
 end)
 
-RegisterServerEvent('OMG:saveCoords')
-AddEventHandler('OMG:saveCoords', function(data)
+RegisterServerEvent('OMG:saveUser')
+AddEventHandler('OMG:saveUser', function(data)
     local source = source
     saveUser(source, data)
 end)
 
 -- TODO: Save players every Citizen.Wait(10 * 60 * 1000)
---[[Citizen.CreateThread(function()
+Citizen.CreateThread(function()
     local players = GetNumPlayerIndices()
 	while true do
 		Citizen.Wait(10 * 60 * 1000)
-        saveAllUser(players)
+        for i=1, players, 1 do
+            --saveUser(players)
+            print(players)
+            players = players-1
+        end
         printf("Saving "..players.." players")
 	end
-end)]]--
+end)
