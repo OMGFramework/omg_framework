@@ -6,7 +6,5 @@ function printf(...)
             str = str .. ' ' .. tostring(args[i])
         end
         print('^2[^1'..GetCurrentResourceName()..'^2]' .. str)
-    else
-        return
     end
 end
